@@ -519,7 +519,7 @@ ul {
   line-height: 1.88;
   letter-spacing: 0.06em;
   padding: 10px 0;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  // box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   border: 1px solid $borderColor;
   gap: 25px;
@@ -702,7 +702,7 @@ textarea {
 }
 .info_box input:focus,
 textarea:focus {
-  outline: 1px solid blue;
+  outline: 1px solid $blue;
 }
 
 .info_box textarea {
