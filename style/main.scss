@@ -158,10 +158,17 @@ h1 {
 }
 
 //skills section
+// @mixin skill-container {
+//   width: 1170px;
+// }
 .skills_section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   &__list {
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
     margin-bottom: 60px;
     gap: calc(3 * $gap);
   }
@@ -191,7 +198,7 @@ h1 {
     text-align: left;
   }
 }
-
+\
 // section What we to do
 
 .workTitle {
