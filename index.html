@@ -84,76 +84,79 @@
     <div class="container">
       <!-- header section -->
       <header class="page_header">
-        <a class="logo head_logo" href="index.html"
-          >Web<span class="logo_web">Studio</span></a
-        >
-        <!-- Navigation to other pages -->
-
-        <button
-          class="menu-toggle js-open-menu"
-          aria-expanded="false"
-          aria-controls="mobile-menu"
-        >
-          <svg
-            width="24"
-            height="24"
-            fill="currentColor"
-            viewBox="0 0 20 20"
-            xmlns="http://www.w3.org/2000/svg"
+        <div class="page_header__inner">
+          <a class="page_header__logo" href="index.html"
+            >Web<span class="logo_web">Studio</span></a
           >
-            <path
-              fill-rule="evenodd"
-              d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-              clip-rule="evenodd"
-            ></path>
-          </svg>
-        </button>
-        <nav>
-          <ul class="navigation_bar main_nav_list">
-            <li class="main_nav_item">
-              <a class="main_nav_link" href="index.html">Studio</a>
+          <!-- Navigation to other pages -->
+
+          <button
+            class="menu-toggle js-open-menu"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+          >
+            <svg
+              width="24"
+              height="24"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+          </button>
+          <nav>
+            <ul class="navigation_bar main_nav">
+              <li class="main_nav__item">
+                <a class="main_nav__link" href="index.html">Studio</a>
+              </li>
+              <li class="main_nav__item">
+                <a class="main_nav__link" href="portfolio.html">Portfolio</a>
+              </li>
+              <li class="main_nav__item">
+                <a class="main_nav__link" href="#contacte">Contacte</a>
+              </li>
+            </ul>
+          </nav>
+
+          <!-- contact section -->
+
+          <ul class="contact_list">
+            <li class="contact_list_item">
+              <a
+                href="mailto:info@devstudio.com"
+                target="_blank"
+                class="contact_section_value"
+              >
+                <svg class="contact_list_icon">
+                  <use
+                    href="./images/social-icons/symbol-defs.svg#icon-envelope"
+                  ></use>
+                </svg>
+                info@devstudio.com</a
+              >
             </li>
-            <li class="main_nav_item">
-              <a class="main_nav_link" href="portfolio.html">Portfolio</a>
-            </li>
-            <li class="main_nav_item">
-              <a class="main_nav_link" href="#contacte">Contacte</a>
+
+            <li class="contact_list_item">
+              <a
+                href="tel:+380961111111"
+                target="_blank"
+                class="contact_section_value"
+              >
+                <svg class="contact_list_icon">
+                  <use
+                    href="./images/social-icons/symbol-defs.svg#icon-smartphone"
+                  ></use>
+                </svg>
+                +38096 111 11 11</a
+              >
             </li>
           </ul>
-        </nav>
-        <!-- contact section -->
-
-        <ul class="contact_list">
-          <li class="contact_list_item">
-            <a
-              href="mailto:info@devstudio.com"
-              target="_blank"
-              class="contact_section_value"
-            >
-              <svg class="contact_list_icon">
-                <use
-                  href="./images/social-icons/symbol-defs.svg#icon-envelope"
-                ></use>
-              </svg>
-              info@devstudio.com</a
-            >
-          </li>
-
-          <li class="contact_list_item">
-            <a
-              href="tel:+380961111111"
-              target="_blank"
-              class="contact_section_value"
-            >
-              <svg class="contact_list_icon">
-                <use
-                  href="./images/social-icons/symbol-defs.svg#icon-smartphone"
-                ></use>
-              </svg>
-              +38096 111 11 11</a
-            >
-          </li>
-        </ul>
+        </div>
       </header>
 
       <!-- main section -->
