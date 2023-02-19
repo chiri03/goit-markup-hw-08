@@ -22,7 +22,7 @@
 
 .menu-toggle:hover,
 .menu-toggle:focus {
-  background-color: $blue;
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
 .menu-container {
@@ -40,7 +40,6 @@
 
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
 }
 
 .menu-container.is-open {
@@ -88,10 +87,6 @@
 
   &__value {
     color: $gray;
-
-    &:hover {
-      color: $blue;
-    }
   }
 }
 
@@ -99,9 +94,12 @@
   margin-top: auto;
   margin-bottom: 30px;
   line-height: 29px;
+
   &__link {
     font-weight: 500;
     font-size: 24px;
     color: $gray;
+    text-decoration: none;
+    padding-left: 10px;
   }
 }

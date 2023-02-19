@@ -1,30 +1,32 @@
 .main_nav {
   display: none;
+  align-items: center;
+  gap: 10px;
 
   &__link {
     color: $black;
-  }
-}
-.contact_list {
-  &_icon {
-    width: 16px;
-    height: 16px;
-    fill: currentColor;
   }
 }
 
 @media (min-width: 768px) {
   .main_nav {
     display: flex;
-    justify-content: space-around;
   }
 
-  .contact_list {
-    display: flex;
-    gap: 10px;
+  .main_nav--contact_list {
+    flex-direction: column;
+    margin-left: auto;
+    align-items: start;
     &__item {
       justify-content: center;
       align-items: center;
     }
+  }
+}
+
+@media (min-width: 1024px) {
+  .main_nav--contact_list {
+    display: row;
+    align-items: center;
   }
 }
