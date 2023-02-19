@@ -1,0 +1,21 @@
+.work-section {
+  display: none;
+}
+
+@media screen and (min-width: 1200px) {
+  .work-section {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 94px;
+
+    .workTitle {
+      font-weight: 700;
+      font-size: 36px;
+      line-height: 42px;
+      letter-spacing: 0.03em;
+      margin: 0 auto;
+      text-align: center;
+      padding-bottom: 30px;
+    }
+  }
+}
