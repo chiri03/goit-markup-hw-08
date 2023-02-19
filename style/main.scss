@@ -4,6 +4,10 @@
 @import "../Sass/components/mobile-menu";
 @import "../Sass/components/big-section";
 @import "../Sass/components/what-we-do";
+@import "../Sass/components/skills-section";
+@import "../Sass/components/items-svg";
+@import "../Sass/components/customers_section";
+@import "../Sass/components/logo-customer";
 
 html,
 body {
@@ -157,10 +161,7 @@ h1 {
   color: $blue;
 }
 
-//skills section
-// @mixin skill-container {
-//   width: 1170px;
-// }
+// .skills_section {
 .skills_section {
   display: flex;
   justify-content: center;
@@ -168,18 +169,10 @@ h1 {
 
   &__list {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     margin-bottom: 60px;
     gap: calc(3 * $gap);
-  }
-
-  &__icons {
-    padding: 25px 100px;
-    background-color: #f5f4fa;
-    border-radius: 4px;
-    margin-bottom: 30px;
-    max-width: 270px;
-    max-height: 120px;
   }
 
   &__title {
@@ -188,6 +181,7 @@ h1 {
     line-height: 1.14;
     letter-spacing: 0.03em;
     margin-bottom: 10px;
+    text-align: center;
   }
   &__subtitle {
     color: $gray;
@@ -198,7 +192,6 @@ h1 {
     text-align: left;
   }
 }
-\
 // section What we to do
 
 .workTitle {
@@ -346,11 +339,6 @@ h1 {
       fill: currentColor;
     }
   }
-}
-
-.customer_section {
-  display: flex;
-  justify-content: center;
 }
 
 .customers {

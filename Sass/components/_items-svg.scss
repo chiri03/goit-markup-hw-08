@@ -1,0 +1,53 @@
+.svg-items {
+  display: flex;
+  flex-direction: column;
+  gap: $gap;
+  margin-bottom: 60px;
+
+  &__link {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 25px;
+    background-color: #f5f4fa;
+    border-radius: 4px;
+
+    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  &__title {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    margin-bottom: 10px;
+    margin-top: 30px;
+    text-align: center;
+  }
+  &__subtitle {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+    text-align: left;
+    color: $gray;
+  }
+}
+@media screen and (min-width: 768px) {
+  .svg-items {
+    flex-direction: row;
+    flex-wrap: wrap;
+    &__item {
+      flex-basis: calc((100% - $gap) / 2);
+    }
+    &__title {
+      text-align: left;
+    }
+  }
+}
+@media screen and (min-width: 1200px) {
+  .svg-items {
+    flex-wrap: nowrap;
+    margin-bottom: 94px;
+    &__item {
+      flex-basis: calc((100% - (3 * $gap)) / 4);
+    }
+  }
+}

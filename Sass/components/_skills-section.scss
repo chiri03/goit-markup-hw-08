@@ -1,2 +1,9 @@
 .skills_section {
+  display: flex;
+  justify-content: center;
+  background-color: $white;
+
+  &__inner {
+    flex-basis: 480px;
+  }
 }
