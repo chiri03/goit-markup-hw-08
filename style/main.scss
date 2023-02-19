@@ -9,7 +9,6 @@ body {
   font-style: normal;
   font-weight: 400;
   letter-spacing: 0.02em;
-  overflow: hidden;
 }
 
 * {
@@ -43,7 +42,7 @@ ul {
 @mixin display-on-page {
   display: flex;
   justify-content: center;
-  align-items: center;
+  // align-items: center;
 }
 
 // page hader
@@ -64,7 +63,7 @@ ul {
 }
 // nav bar
 
-.navigation_bar {
+.main_nav {
   font-weight: 500;
   font-size: 14px;
   line-height: 18px;
