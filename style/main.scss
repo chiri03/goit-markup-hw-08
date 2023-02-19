@@ -1,4 +1,7 @@
-@import "../Sass/utils/vars.scss";
+@import "../Sass/utils/vars";
+@import "../Sass/utils/components/header";
+@import "../Sass/utils/components/menu";
+@import "../Sass/utils/components/mobile-menu";
 
 html,
 body {

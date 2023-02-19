@@ -1,0 +1,14 @@
+.page_header {
+  display: flex;
+  justify-content: center;
+
+  &__inner {
+    background-color: $white;
+    flex: 0 0 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__logo {
+  }
+}
