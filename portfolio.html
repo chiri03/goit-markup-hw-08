@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <title>GoIT-markup-hw-08</title>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -32,15 +33,15 @@
         >
         <!-- Navigation to other pages  -->
         <nav class="portfolio">
-          <ul class="navigation_bar">
-            <li class="main_nav_item">
-              <a class="main_nav_link" href="index.html">Studio</a>
+          <ul class="main_nav">
+            <li class="main_nav__item">
+              <a class="main_nav__link" href="index.html">Studio</a>
             </li>
-            <li class="main_nav_item">
-              <a class="main_nav_link" href="portfolio.html">Portofolio</a>
+            <li class="main_nav__item">
+              <a class="main_nav__link" href="portfolio.html">Portofolio</a>
             </li>
-            <li class="main_nav_item">
-              <a class="main_nav_link" href="#contacte">Contacte</a>
+            <li class="main_nav__item">
+              <a class="main_nav__link" href="#contacte">Contacts</a>
             </li>
           </ul>
         </nav>
@@ -324,6 +325,29 @@
         </div>
       </footer>
     </div>
-    <script src="./js/modal.js"></script>
+    <div class="menu-container js-menu-container" id="mobile-menu">
+      <button class="menu-toggle js-close-menu">
+        <svg
+          fill="currentColor"
+          viewBox="0 0 20 20"
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+            clip-rule="evenodd"
+          ></path>
+        </svg>
+      </button>
+
+      <ul class="mobile-menu">
+        <li><a href="" class="link">Studio</a></li>
+        <li><a href="" class="link">Portfolio</a></li>
+        <li><a href="" class="link">Contacts</a></li>
+      </ul>
+    </div>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>
