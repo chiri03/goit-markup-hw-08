@@ -1,0 +1,34 @@
+.team_section {
+  display: flex;
+  justify-content: center;
+  background-color: $lightgray;
+
+  &__inner {
+    flex-basis: 480px;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 42px;
+    letter-spacing: 0.03em;
+    margin: 0 auto;
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .team_section {
+    &__inner {
+      flex-basis: 768px;
+    }
+  }
+}
+@media screen and (min-width: 1200px) {
+  .team_section {
+    margin-bottom: 94px;
+    &__inner {
+      flex-basis: 1200px;
+    }
+  }
+}
