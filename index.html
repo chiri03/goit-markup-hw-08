@@ -17,7 +17,7 @@
       href="https://fonts.googleapis.com/css2?family=Corinthia&family=Oleo+Script&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./style/main.css" />
+    <link rel="stylesheet" href="./css/main.min.css" />
   </head>
   <body>
     <div class="modal is-hidden" data-modal>
@@ -84,62 +84,85 @@
     <div class="container">
       <!-- header section -->
       <header class="page_header">
-        <a class="logo head_logo" href="index.html"
-          >Web<span class="logo_web">Studio</span></a
-        >
-        <!-- Navigation to other pages -->
-        <nav>
-          <ul class="navigation_bar main_nav_list">
-            <li class="main_nav_item">
-              <a class="main_nav_link" href="index.html">Studio</a>
+        <div class="page_header__inner">
+          <a class="page_header__logo" href="index.html"
+            >Web<span class="logo_web">Studio</span></a
+          >
+          <!-- Navigation to other pages -->
+
+          <button
+            class="menu-toggle js-open-menu"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+          >
+            <svg
+              width="24"
+              height="24"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+          </button>
+          <nav>
+            <ul class="main_nav">
+              <li class="main_nav__item">
+                <a class="main_nav__link" href="index.html">Studio</a>
+              </li>
+              <li class="main_nav__item">
+                <a class="main_nav__link" href="portfolio.html">Portfolio</a>
+              </li>
+              <li class="main_nav__item">
+                <a class="main_nav__link" href="#contacte">Contacte</a>
+              </li>
+            </ul>
+          </nav>
+
+          <!-- contact section -->
+
+          <ul class="main_nav main_nav--contact_list">
+            <li class="contact_list__item">
+              <a
+                href="mailto:info@devstudio.com"
+                target="_blank"
+                class="contact_list__value"
+              >
+                <svg class="contact_list__icon">
+                  <use
+                    href="./images/social-icons/symbol-defs.svg#icon-envelope"
+                  ></use>
+                </svg>
+                info@devstudio.com</a
+              >
             </li>
-            <li class="main_nav_item">
-              <a class="main_nav_link" href="portfolio.html">Portfolio</a>
-            </li>
-            <li class="main_nav_item">
-              <a class="main_nav_link" href="#contacte">Contacte</a>
+
+            <li class="contact_list__item">
+              <a
+                href="tel:+380961111111"
+                target="_blank"
+                class="contact_list__value"
+              >
+                <svg class="contact_list__icon">
+                  <use
+                    href="./images/social-icons/symbol-defs.svg#icon-smartphone"
+                  ></use>
+                </svg>
+                +38096 111 11 11</a
+              >
             </li>
           </ul>
-        </nav>
-        <!-- contact section -->
-
-        <ul class="contact_list">
-          <li class="contact_list_item">
-            <a
-              href="mailto:info@devstudio.com"
-              target="_blank"
-              class="contact_section_value"
-            >
-              <svg class="contact_list_icon">
-                <use
-                  href="./images/social-icons/symbol-defs.svg#icon-envelope"
-                ></use>
-              </svg>
-              info@devstudio.com</a
-            >
-          </li>
-
-          <li class="contact_list_item">
-            <a
-              href="tel:+380961111111"
-              target="_blank"
-              class="contact_section_value"
-            >
-              <svg class="contact_list_icon">
-                <use
-                  href="./images/social-icons/symbol-defs.svg#icon-smartphone"
-                ></use>
-              </svg>
-              +38096 111 11 11</a
-            >
-          </li>
-        </ul>
+        </div>
       </header>
 
       <!-- main section -->
       <main>
         <div class="big_section">
-          <h1>
+          <h1 class="big_section__title">
             EFFECTIVE SOLUTIONS FOR <br />
             YOUR BUSINESS
           </h1>
@@ -149,56 +172,63 @@
         </div>
 
         <!-- section skills -->
-        <section class="section skills_section">
-          <div class="container">
-            <ul class="skills_section_list">
-              <li class="skills_section_item">
-                <svg class="skills_section_icons">
-                  <use
-                    href="./images/social-icons/symbol-defs.svg#icon-antenna-1"
-                  ></use>
-                </svg>
-                <h3 class="skills_section_title">Atenție la detalii</h3>
-                <p class="skills_section_subtitle">
-                  Considerații ideologice precum și începutul unor activități
-                  zilnice privind formarea unei poziții.
+        <section class="skills_section">
+          <div class="skills_section__inner">
+            <ul class="svg-items">
+              <li class="svg-items__item">
+                <div class="svg-items__link">
+                  <svg class="svg-items__icon" width="70" height="70">
+                    <use
+                      href="./images/social-icons/symbol-defs.svg#icon-antenna-1"
+                    ></use>
+                  </svg>
+                </div>
+                <h3 class="svg-items__title">ATTENTION TO DETAILS</h3>
+                <p class="svg-items__subtitle">
+                  We go into all the details and processes of your business to
+                  develop a customized solution.
                 </p>
               </li>
-
-              <li class="skills_section_item">
-                <svg class="skills_section_icons">
-                  <use
-                    href="./images/social-icons/symbol-defs.svg#icon-clock-1"
-                  ></use>
-                </svg>
-                <h3 class="skills_section_title">Punctualitate</h3>
-                <p class="skills_section_subtitle">
-                  Sarcina organizației, în special ce implică cadrul și locul de
-                  formare a personalului
+              <li class="svg-items__item">
+                <div class="svg-items__link">
+                  <svg class="svg-items__icon" width="70" height="70">
+                    <use
+                      href="./images/social-icons/symbol-defs.svg#icon-clock-1"
+                    ></use>
+                  </svg>
+                </div>
+                <h3 class="svg-items__title">PUNCTUALITY</h3>
+                <p class="svg-items__subtitle">
+                  With us, you can feel safe and secure. An important principle
+                  of the company: respect your time and deadlines.
                 </p>
               </li>
-              <li class="skills_section_item">
-                <svg class="skills_section_icons">
-                  <use
-                    href="./images/social-icons/symbol-defs.svg#icon-diagram-1"
-                  ></use>
-                </svg>
-                <h3 class="skills_section_title">Planificare</h3>
-                <p class="skills_section_subtitle">
-                  În mod similar, consultarea cu un activ larg este în mare
-                  parte condiționată.
+              <li class="svg-items__item">
+                <div class="svg-items__link">
+                  <svg class="svg-items__icon" width="70" height="70">
+                    <use
+                      href="./images/social-icons/symbol-defs.svg#icon-diagram-1"
+                    ></use>
+                  </svg>
+                </div>
+                <h3 class="svg-items__title">PLANNING</h3>
+                <p class="svg-items__subtitle">
+                  You will be able to observe and participate in every phase of
+                  solution development and implementation.
                 </p>
               </li>
-              <li class="skills_section_item">
-                <svg class="skills_section_icons">
-                  <use
-                    href="./images/social-icons/symbol-defs.svg#icon-astronaut-1"
-                  ></use>
-                </svg>
-                <h3 class="skills_section_title">Tehnologii moderne</h3>
-                <p class="skills_section_subtitle">
-                  Importanța acestor probleme este atât de evidentă, la fel ca
-                  și implementarea obiectivelor planificate.
+              <li class="svg-items__item">
+                <div class="svg-items__link">
+                  <svg class="svg-items__icon" width="70" height="70">
+                    <use
+                      href="./images/social-icons/symbol-defs.svg#icon-astronaut-1"
+                    ></use>
+                  </svg>
+                </div>
+                <h3 class="svg-items__title">MODERN TECHNOLOGIES</h3>
+                <p class="svg-items__subtitle">
+                  We use innovative tools to solve assigned tasks. It's time to
+                  simplify work processes.
                 </p>
               </li>
             </ul>
@@ -206,50 +236,56 @@
         </section>
 
         <!-- section What we to do -->
-        <section class="section">
-          <h2 class="workTitle">What we do</h2>
+        <section class="work-section">
+          <div class="work-section__inner">
+            <h2 class="workTitle">What we do</h2>
 
-          <ul class="work_section_items">
-            <li class="box">
-              <img
-                src="./images/box1.jpg"
-                alt="Coding activities"
-                style="width: 370px"
-              />
-              <div class="box_bottom"><p>DESKTOP APPS</p></div>
-            </li>
-            <li class="box">
-              <img
-                src="./images/box2.jpg"
-                alt="choosing telephome frame"
-                style="width: 370px"
-              />
-              <div class="box_bottom">
-                <p>Mobile APPS</p>
-              </div>
-            </li>
+            <ul class="work_section_items">
+              <li class="box">
+                <img
+                  src="./images/box1.jpg"
+                  alt="Coding activities"
+                  style="width: 370px"
+                />
+                <div class="box_bottom"><p>DESKTOP APPS</p></div>
+              </li>
+              <li class="box">
+                <img
+                  src="./images/box2.jpg"
+                  alt="choosing telephome frame"
+                  style="width: 370px"
+                />
+                <div class="box_bottom">
+                  <p>Mobile APPS</p>
+                </div>
+              </li>
 
-            <li class="box">
-              <img
-                src="./images/box3.jpg"
-                alt="work with colors"
-                style="width: 370px"
-              />
-              <div class="box_bottom">
-                <p>DESIGN SOLUTIONS</p>
-              </div>
-            </li>
-          </ul>
+              <li class="box">
+                <img
+                  src="./images/box3.jpg"
+                  alt="work with colors"
+                  style="width: 370px"
+                />
+                <div class="box_bottom">
+                  <p>DESIGN SOLUTIONS</p>
+                </div>
+              </li>
+            </ul>
+          </div>
         </section>
 
         <!-- our team section -->
         <section class="section team_section">
-          <div class="container">
-            <h2 class="our_team">Our Team</h2>
+          <div class="team_section__inner">
+            <h2 class="team_section-title">Our Team</h2>
             <ul class="our_team_section">
-              <li class="team">
+              <li class="our_team_section__item">
                 <img
-                  class="photo"
+                  class="our_team_section__photo"
+                  srcset="
+                    ./images/teamimg/team-1-420.png 420w,
+                    ./images/teamimg/team-1-960.png 960w
+                  "
                   src="./images/photoCristopher.jpg"
                   alt="Cristopher Photo"
                 />
@@ -297,9 +333,13 @@
                 </ul>
               </li>
 
-              <li class="team">
+              <li class="our_team_section__item">
                 <img
-                  class="photo"
+                  class="our_team_section__photo"
+                  srcset="
+                    ./images/teamimg/team-2-420.png 420w,
+                    ./images/teamimg/team-2-960.png 960w
+                  "
                   src="./images/photoKylie.jpg"
                   alt="Kylie Photo"
                 />
@@ -347,9 +387,13 @@
                 </ul>
               </li>
 
-              <li class="team">
+              <li class="our_team_section__item">
                 <img
-                  class="photo"
+                  class="our_team_section__photo"
+                  srcset="
+                    ./images/teamimg/team-3-420.png 420w,
+                    ./images/teamimg/team-3-960.png 960w
+                  "
                   src="./images/photoRyan.jpg"
                   alt="Ryan Photo"
                 />
@@ -397,9 +441,13 @@
                 </ul>
               </li>
 
-              <li class="team">
+              <li class="our_team_section__item">
                 <img
-                  class="photo"
+                  class="our_team_section__photo"
+                  srcset="
+                    ./images/teamimg/team-4-420.png 420w,
+                    ./images/teamimg/team-4-960.png 960w
+                  "
                   src="./images/photoTyler.jpg"
                   alt="Tyler Photo"
                 />
@@ -451,51 +499,63 @@
         </section>
 
         <!-- Regular Customers section-->
-        <section class="section customer_section">
-          <div class="customers">
-            <h2 class="customers_section">Regular Customers</h2>
-            <ul class="customers_logo">
-              <li class="customers_logo_item">
-                <svg class="customers_logo_icon">
-                  <use
-                    href="./images/social-icons/symbol-defs.svg#icon-group"
-                  ></use>
-                </svg>
+        <section class="section customers_section">
+          <div class="customers_section__inner">
+            <h2 class="customers_section__title">Regular Customers</h2>
+            <ul class="logo-customer">
+              <li class="logo-customer__item">
+                <div class="logo-customer__svg">
+                  <svg class="logo-customer__icon">
+                    <use
+                      href="./images/social-icons/symbol-defs.svg#icon-group"
+                    ></use>
+                  </svg>
+                </div>
               </li>
-              <li class="customers_logo_item">
-                <svg class="customers_logo_icon">
-                  <use
-                    href="./images/social-icons/symbol-defs.svg#icon-group-1"
-                  ></use>
-                </svg>
+              <li class="logo-customer__item">
+                <div class="logo-customer__svg">
+                  <svg class="logo-customer__icon">
+                    <use
+                      href="./images/social-icons/symbol-defs.svg#icon-group-1"
+                    ></use>
+                  </svg>
+                </div>
               </li>
-              <li class="customers_logo_item">
-                <svg class="customers_logo_icon">
-                  <use
-                    href="./images/social-icons/symbol-defs.svg#icon-group-2"
-                  ></use>
-                </svg>
+              <li class="logo-customer__item">
+                <div class="logo-customer__svg">
+                  <svg class="logo-customer__icon">
+                    <use
+                      href="./images/social-icons/symbol-defs.svg#icon-group-2"
+                    ></use>
+                  </svg>
+                </div>
               </li>
-              <li class="customers_logo_item">
-                <svg class="customers_logo_icon">
-                  <use
-                    href="./images/social-icons/symbol-defs.svg#icon-group-3"
-                  ></use>
-                </svg>
+              <li class="logo-customer__item">
+                <div class="logo-customer__svg">
+                  <svg class="logo-customer__icon">
+                    <use
+                      href="./images/social-icons/symbol-defs.svg#icon-group-3"
+                    ></use>
+                  </svg>
+                </div>
               </li>
-              <li class="customers_logo_item">
-                <svg class="customers_logo_icon">
-                  <use
-                    href="./images/social-icons/symbol-defs.svg#icon-group-4"
-                  ></use>
-                </svg>
+              <li class="logo-customer__item">
+                <div class="logo-customer__svg">
+                  <svg class="logo-customer__icon">
+                    <use
+                      href="./images/social-icons/symbol-defs.svg#icon-group-4"
+                    ></use>
+                  </svg>
+                </div>
               </li>
-              <li class="customers_logo_item">
-                <svg class="customers_logo_icon">
-                  <use
-                    href="./images/social-icons/symbol-defs.svg#icon-group-5"
-                  ></use>
-                </svg>
+              <li class="logo-customer__item">
+                <div class="logo-customer__svg">
+                  <svg class="logo-customer__icon">
+                    <use
+                      href="./images/social-icons/symbol-defs.svg#icon-group-5"
+                    ></use>
+                  </svg>
+                </div>
               </li>
             </ul>
           </div>
@@ -590,7 +650,66 @@
           </div>
         </div>
       </footer>
+
+      <div class="menu-container js-menu-container" id="mobile-menu">
+        <button class="menu-toggle js-close-menu">
+          <svg
+            fill="currentColor"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+              clip-rule="evenodd"
+            ></path>
+          </svg>
+        </button>
+
+        <ul class="mobile-menu">
+          <li><a href="index.html" class="link">Studio</a></li>
+          <li><a href="portfolio.html" class="link">Portfolio</a></li>
+          <li><a href="#contacte" class="link">Contacts</a></li>
+        </ul>
+        <ul class="menu-contacts">
+          <li class="menu-contacts__list">
+            <a class="menu-contacts__link" href="mailto:info@devstudio.com">
+              <svg class="contact_list__icon">
+                <use
+                  href="./images/social-icons/symbol-defs.svg#icon-envelope"
+                ></use>
+              </svg>
+              info@devstudio.com</a
+            >
+          </li>
+          <li class="menu-contacts__list">
+            <a class="menu-contacts__link" href="tel:+12127724150">
+              <svg class="contact_list__icon">
+                <use
+                  href="./images/social-icons/symbol-defs.svg#icon-smartphone"
+                ></use>
+              </svg>
+              +1 212-772-4150</a
+            >
+          </li>
+        </ul>
+        <ul class="social-links">
+          <li><a href="" class="social-links__value">Instagram</a></li>
+          <li><a href="" class="social-links__value">Twitter</a></li>
+          <li><a href="" class="social-links__value">Facebook</a></li>
+          <li><a href="" class="social-links__value">LinkedIn</a></li>
+        </ul>
+      </div>
     </div>
     <script src="./js/modal.js"></script>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="js/mobile-menu.js"></script>
   </body>
 </html>
