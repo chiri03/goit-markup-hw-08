@@ -1,0 +1,36 @@
+.social_icons_list {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 30px;
+
+  .team_link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px;
+    border-radius: 50%;
+    color: $lightgray;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover {
+      background-color: $blue;
+      color: $white;
+    }
+
+    .social_icons {
+      fill: currentColor;
+      color: gray;
+    }
+  }
+}
+
+.footer_social_icons {
+  .social_link {
+    color: $white;
+    background-color: rgba(255, 255, 255, 0.1);
+    &:hover {
+      background-color: $blue;
+    }
+  }
+}
