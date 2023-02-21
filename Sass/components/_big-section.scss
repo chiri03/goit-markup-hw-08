@@ -40,7 +40,7 @@
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .request_button {
-  background-color: #1775c1;
+  background-color: $blue;
 }
 
 @media screen and (min-width: 768px) {

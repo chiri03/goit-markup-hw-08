@@ -20,6 +20,10 @@
   }
 }
 
+.contact_list__icon {
+  width: 20px;
+  height: 20px;
+}
 .menu-toggle:hover,
 .menu-toggle:focus {
   background-color: rgba(0, 0, 0, 0.1);
@@ -82,11 +86,11 @@
   display: flex;
   gap: 10px;
   font-family: Roboto;
-  font-size: 18px;
+  font-size: 15px;
   padding: 10px;
 
   &__value {
-    color: $gray;
+    color: currentColor;
   }
 }
 
@@ -101,5 +105,12 @@
     color: $gray;
     text-decoration: none;
     padding-left: 10px;
+    line-height: 2em;
+  }
+}
+
+@media (min-width: 768px) {
+  .menu-toggle {
+    display: none;
   }
 }
