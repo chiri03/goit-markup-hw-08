@@ -1,25 +1,13 @@
-@import "../Sass/utils/vars";
-@import "../Sass/components/header";
-@import "../Sass/components/menu";
-@import "../Sass/components/mobile-menu";
-@import "../Sass/components/big-section";
-@import "../Sass/components/what-we-do";
-@import "../Sass/components/skills-section";
-@import "../Sass/components/items-svg";
-@import "../Sass/components/customers_section";
-@import "../Sass/components/logo-customer";
-@import "../Sass/components/team-section";
-@import "../Sass/components/modal-window";
-@import "../Sass/components/team-members";
-@import "../Sass/components/social-link";
-@import "../Sass/components/footer";
+@import "../Sass/utils/_vars.scss";
+@import "../Sass/utils/components/logo";
+@import "../Sass/utils/components/header-section";
+@import "../Sass/utils/components/portfolio";
 
 html,
 body {
   font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 400;
-  letter-spacing: 0.02em;
 }
 
 * {
@@ -29,28 +17,426 @@ body {
   margin-inline-end: 0px;
   padding-inline-start: 0;
   box-sizing: border-box;
-  list-style-type: none;
   /* outline: 5px solid limegreen !important; */
 }
 
+.section {
+  margin: 94px 0;
+  width: 100%;
+}
 ul {
   list-style-type: none;
-  margin-block-start: 0;
-  margin-block-end: 0;
-  margin-inline-start: 0px;
-  margin-inline-end: 0px;
-  padding-inline-start: 0;
-  text-decoration: none;
 }
 
-a {
+.container {
+  min-width: 1200px;
+  margin: 0 auto;
+}
+
+@mixin bottom-line-border {
+  border-bottom: 4px solid $blue;
+  border-radius: 2px;
+  width: 100%;
+  position: absolute;
+  bottom: -32px;
+  left: 0;
+  transition: border-bottom 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.portfolio:hover::after {
+  content: "";
+  @include bottom-line-border;
+}
+
+// contact header section
+
+.contact_list {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.02em;
+  display: flex;
+  gap: 10px;
+
+  &_item {
+    justify-content: center;
+    align-items: center;
+  }
+
+  &_icon {
+    width: 16px;
+    height: 16px;
+    fill: currentColor;
+  }
+}
+
+.contact_section_value {
+  color: $gray;
+  padding: 5px;
   text-decoration: none;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: $blue;
+  }
+}
+
+.big_section {
+  padding: 200px 0;
+  text-align: center;
+  display: block;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(13, 13, 13, 0.52),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../images/bg-img.jpg);
+
+  h1 {
+    font-size: 44px;
+    line-height: 1.36;
+    letter-spacing: 0.06em;
+    font-weight: 900;
+    color: $white;
+    text-align: center;
+  }
+  .button {
+    background-color: $blue;
+    color: $white;
+    border: 1px solid $blue;
+    font-size: 16px;
+    line-height: 1.87;
+    letter-spacing: 0.06em;
+    padding: 10px 20px;
+    border-radius: 4px;
+    margin-top: 30px;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .request_button:hover,
+  .request_button:focus,
+  .request_button:active {
+    background-color: $lightgray;
+    color: $blue;
+  }
+}
+
+//skills section
+@mixin skill-container {
+  width: 1170px;
+}
+
+.skills_section {
+  .container {
+    @include skill-container;
+  }
+
+  .container &_list {
+    display: flex;
+    gap: 30px;
+    padding: 0;
+  }
+
+  &_icons {
+    @include display-on-page;
+    padding: 25px 100px;
+    background-color: #f5f4fa;
+    border-radius: 4px;
+    margin-bottom: 30px;
+    max-width: 270px;
+    max-height: 120px;
+  }
+
+  &_title {
+    font-weight: $fontWeight;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    margin-bottom: 10px;
+  }
+  &_subtitle {
+    color: $gray;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    text-align: left;
+  }
+}
+
+// section What we to do
+.workTitle {
+  font-weight: $fontWeight;
+  font-size: 36px;
+  line-height: 36px;
+  letter-spacing: 0.03em;
+  color: $black;
+  text-align: center;
+  margin-bottom: 90px;
+}
+
+.work_section_items {
+  display: flex;
+  justify-content: space-around;
+  padding-left: 0 215px;
+}
+
+.box {
+  position: relative;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &_bottom {
+    position: absolute;
+    width: 370px;
+    height: 70px;
+    bottom: 3px;
+    background: rgba(47, 48, 58, 0.8);
+    color: $white;
+    padding: 27px;
+
+    & p {
+      font-size: 14px;
+      line-height: 16px;
+      text-align: center;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      font-weight: $fontWeight;
+    }
+  }
+}
+
+//team section
+
+.team_section {
+  background: $lightgray;
+  display: flex;
+  justify-content: center;
+
+  .container {
+    padding: 94px 0;
+    flex-direction: column;
+    gap: 50px;
+  }
+}
+
+.our_team {
+  font-weight: $fontWeight;
+  font-size: 36px;
+  line-height: 42px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: $black;
+  margin-bottom: 50px;
+
+  &_section {
+    display: flex;
+    justify-content: space-around;
+  }
+}
+
+.team {
+  background-color: $white;
+  border-radius: 0px 0px 4px 4px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.photo {
+  width: 260px;
+  height: 260px;
+
+  &_container_name {
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: #212121;
+    padding: 3px;
+
+    &_post {
+      font-size: 16px;
+      line-height: 19px;
+      text-align: center;
+      letter-spacing: 0.03em;
+      color: $gray;
+      margin-bottom: 30px;
+    }
+  }
+}
+
+.team_link {
+  color: $gray;
+  left: 25px;
+  bottom: 10px;
+}
+@mixin color {
+  color: $gray;
+}
+
+.photo_container_post {
+  @include color;
+  padding: 5px;
+}
+
+.social_icons_list {
+  display: flex;
+  gap: 10px;
+  padding: 2px;
+}
+
+.social_link {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  @include display-on-page;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus,
+  &:active {
+    color: $white;
+    background-color: $blue;
+  }
+
+  .social_icons {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+    &:hover,
+    &:focus,
+    &:active {
+      fill: currentColor;
+    }
+  }
+}
+
+.customer_section {
+  display: flex;
+  justify-content: center;
+}
+
+.customers {
+  width: 1170px;
+  height: 184px;
+
+  &_logo {
+    display: flex;
+    gap: 30px;
+    color: #afb1b8;
+
+    &_icon {
+      width: 100px;
+      height: 47px;
+      fill: currentColor;
+    }
+  }
+}
+
+.customers_logo_item {
+  @include display-on-page;
+  background-color: $white;
+  border: 1px solid #afb1b8;
+  border-radius: 3px;
+  width: 170px;
+  height: 92px;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus,
+  &:active {
+    border-color: $blue;
+    color: $blue;
+  }
+}
+
+.customers_section {
+  font-weight: $fontWeight;
+  font-size: 36px;
+  line-height: 42px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: $black;
+  padding-bottom: 50px;
+}
+
+// footer section
+
+.subsol {
+  background: $footerBg;
+  padding-top: 60px;
+  padding-bottom: 30px;
+
+  .footer_direction {
+    display: flex;
+    align-items: self-start;
+  }
+
+  .footer_address {
+    margin-left: 100px;
+  }
+}
+
+.footer_social_icons {
+  display: flex;
+  flex-direction: column;
+  margin-left: 5%;
+
+  .social_icons_list {
+    margin-left: -10px;
+    fill: $white;
+  }
+  .social_icons {
+    fill: $white;
+  }
+}
+
+.find_us_p {
+  font-style: normal;
+  font-weight: $fontWeight;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: $white;
+  padding-bottom: 25px;
+}
+
+.nv_items_footer {
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.6);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: $blue;
+  }
+}
+
+.footerAddres {
+  color: $white;
+  cursor: pointer;
+  display: inline;
+}
+
+.foot_logo_contacts {
+  margin-left: 130px;
+}
+
+.footer_logo_icons {
+  display: flex;
+  justify-content: center;
 }
 
 .subscribe {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include display-on-page;
   color: $white;
   background-color: $footerBg;
   font-family: inherit;
@@ -69,6 +455,11 @@ a {
 
   &:hover {
     background-color: #188ce8;
+  }
+
+  .social_icons {
+    width: 20px;
+    height: 20px;
   }
 }
 
@@ -106,9 +497,7 @@ a {
 
 //modal section
 .modal {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include display-on-page;
   background-color: rgba(0, 0, 0, 0.2);
   position: fixed;
   width: 100%;
@@ -132,9 +521,7 @@ a {
 }
 
 .close-modal {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include display-on-page;
   background-color: $white;
   height: 30px;
   width: 30px;
@@ -241,7 +628,7 @@ textarea {
 }
 .info_box input:focus,
 textarea:focus {
-  outline: 1px solid $blue;
+  outline: 1px solid blue;
 }
 
 .info_box textarea {
