@@ -37,7 +37,7 @@
           </svg>
         </button>
         <div class="inner_form">
-          <h3 clas="inner_form_title">
+          <h3 class="inner_form_title">
             Leave your information and we'll call you back
           </h3>
           <form class="info_box" autocomplete="off">
@@ -69,12 +69,12 @@
             <label class="checkbox">
               <input type="checkbox" name="checkbox" />
               <span class="checkmark"></span>
-              <p class="checkbox_title">
+              <h3 class="checkbox_title">
                 I agree with the letter and accept the
                 <a class="term" href="#" target="_blank">
                   Terms and Conditions</a
                 >
-              </p>
+              </h3>
             </label>
             <button class="button" type="submit">Send</button>
           </form>
@@ -88,15 +88,24 @@
           >Web<span class="logo_web">Studio</span></a
         >
         <!-- Navigation to other pages -->
+
         <nav>
-          <ul class="main_nav_list">
+          <button
+            class="mobile-nav-toggle"
+            aria-controls="main_nav_list"
+            aria-expanded="false"
+          ></button>
+          <ul id="main_nav_list" data-visible="false" class="main_nav_list">
             <li class="main_nav_item">
+              <span aria-hidden="true"></span>
               <a class="main_nav_link" href="index.html">Studio</a>
             </li>
             <li class="main_nav_item">
+              <span aria-hidden="true"></span>
               <a class="main_nav_link" href="portfolio.html">Portfolio</a>
             </li>
             <li class="main_nav_item">
+              <span aria-hidden="true"></span>
               <a class="main_nav_link" href="#contacte">Contacte</a>
             </li>
           </ul>
@@ -133,6 +142,13 @@
               +38096 111 11 11</a
             >
           </li>
+        </ul>
+
+        <ul class="menu__mobile">
+          <li><a href="#" class="menu__mobile_socila-links">Instagram</a></li>
+          <li><a href="#" class="menu__mobile_socila-links">Twitter</a></li>
+          <li><a href="#" class="menu__mobile_socila-links">Facebook</a></li>
+          <li><a href="#" class="menu__mobile_socila-links">LinkedIn</a></li>
         </ul>
       </header>
 

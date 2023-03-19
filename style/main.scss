@@ -33,44 +33,11 @@ ul {
   margin: 0 auto;
 }
 
-@mixin bottom-line-border {
-  border-bottom: 4px solid $blue;
-  border-radius: 2px;
-  width: 100%;
-  position: absolute;
-  bottom: -32px;
-  left: 0;
-  transition: border-bottom 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.portfolio:hover::after {
-  content: "";
-  @include bottom-line-border;
-}
-
 // contact header section
 
-.contact_list {
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 16px;
-  letter-spacing: 0.02em;
-  display: flex;
-  gap: 10px;
-
-  &_item {
-    justify-content: center;
-    align-items: center;
-  }
-
-  &_icon {
-    width: 16px;
-    height: 16px;
-    fill: currentColor;
-  }
-}
-
 .contact_section_value {
+  display: flex;
+  align-items: center;
   color: $gray;
   padding: 5px;
   text-decoration: none;
@@ -142,7 +109,9 @@ ul {
   }
 
   &_icons {
-    @include display-on-page;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     padding: 25px 100px;
     background-color: #f5f4fa;
     border-radius: 4px;
@@ -292,7 +261,9 @@ ul {
   border-radius: 50%;
   width: 45px;
   height: 45px;
-  @include display-on-page;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   &:hover,
@@ -337,7 +308,9 @@ ul {
 }
 
 .customers_logo_item {
-  @include display-on-page;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: $white;
   border: 1px solid #afb1b8;
   border-radius: 3px;
@@ -436,7 +409,9 @@ ul {
 }
 
 .subscribe {
-  @include display-on-page;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: $white;
   background-color: $footerBg;
   font-family: inherit;
@@ -497,7 +472,9 @@ ul {
 
 //modal section
 .modal {
-  @include display-on-page;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: rgba(0, 0, 0, 0.2);
   position: fixed;
   width: 100%;
@@ -521,7 +498,9 @@ ul {
 }
 
 .close-modal {
-  @include display-on-page;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: $white;
   height: 30px;
   width: 30px;
