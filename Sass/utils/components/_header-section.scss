@@ -86,6 +86,7 @@
   display: flex;
   gap: 10px;
   margin-right: 10px;
+  display: block;
 
   &_item {
     display: flex;
@@ -113,13 +114,12 @@
   .main_nav_list {
     position: fixed;
     inset: 0 0 0 0%;
-
     flex-direction: column;
     padding: min(30vh, 10rem) 2em;
 
     background: $white;
 
-    // display: block;
+    display: inline-block;
     color: inherit;
     font-weight: 500;
     font-size: 40px;
@@ -135,7 +135,6 @@
 
   .mobile-nav-toggle {
     display: block;
-    position: absolute;
     z-index: 9999;
     width: 2.5rem;
     border: 0;
@@ -144,6 +143,7 @@
     background: url("/images/icons8-menu-rounded-30.png");
     background-repeat: no-repeat;
     aspect-ratio: 1;
+    position: absolute;
   }
 
   .main_nav_link {
@@ -164,44 +164,44 @@
     }
   }
 
-  // .contact_list {
-  //   display: flex;
-  //   flex-direction: column;
-  //   justify-content: center;
-  //   position: fixed;
-  //   top: 75%;
-  //   left: 15%;
+  .contact_list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: fixed;
+    display: none;
 
-  //   &_item {
-  //     display: block;
-  //     color: inherit;
-  //     font-weight: 500;
-  //     font-size: 30px;
-  //     line-height: 1.17;
-  //     letter-spacing: 0.02em;
-  //   }
+    &_item {
+      display: block;
+      color: inherit;
+      font-weight: 500;
+      font-size: 30px;
+      line-height: 1.17;
+      letter-spacing: 0.02em;
+    }
 
-  //   &_value {
-  //     color: $white;
-  //   }
-  // }
+    &_value {
+      color: $white;
+    }
+  }
 
-  // .menu__mobile {
-  //   position: absolute;
-  //   display: flex;
-  //   flex-direction: row;
-  //   margin-top: 64px;
-  //   margin-bottom: 48px;
-  //   gap: 20px;
-  //   top: 85%;
-  //   left: 10%;
+  .menu__mobile {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    margin-top: 64px;
+    margin-bottom: 48px;
+    gap: 20px;
+    top: 85%;
+    left: 10%;
+    display: none;
 
-  //   &_socila-links {
-  //     color: #2196f3;
-  //     font-size: 18px;
-  //     line-height: 1.22;
-  //     font-weight: 500;
-  //     text-decoration: none;
-  //   }
-  // }
+    &_socila-links {
+      color: #2196f3;
+      font-size: 18px;
+      line-height: 1.22;
+      font-weight: 500;
+      text-decoration: none;
+    }
+  }
 }

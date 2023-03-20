@@ -2,6 +2,10 @@
 @import "../Sass/utils/components/logo";
 @import "../Sass/utils/components/header-section";
 @import "../Sass/utils/components/portfolio";
+@import "../Sass/utils/components/big-section";
+@import "../Sass/utils/components/skills-section";
+
+@import "../Sass/utils/components/what-we-do";
 
 html,
 body {
@@ -20,17 +24,8 @@ body {
   /* outline: 5px solid limegreen !important; */
 }
 
-.section {
-  margin: 94px 0;
-  width: 100%;
-}
 ul {
   list-style-type: none;
-}
-
-.container {
-  min-width: 1200px;
-  margin: 0 auto;
 }
 
 // contact header section
@@ -47,133 +42,6 @@ ul {
   &:focus,
   &:active {
     color: $blue;
-  }
-}
-
-.big_section {
-  padding: 200px 0;
-  text-align: center;
-  display: block;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-image: linear-gradient(
-      to bottom,
-      rgba(13, 13, 13, 0.52),
-      rgba(47, 48, 58, 0.4)
-    ),
-    url(../images/bg-img.jpg);
-
-  h1 {
-    font-size: 44px;
-    line-height: 1.36;
-    letter-spacing: 0.06em;
-    font-weight: 900;
-    color: $white;
-    text-align: center;
-  }
-  .button {
-    background-color: $blue;
-    color: $white;
-    border: 1px solid $blue;
-    font-size: 16px;
-    line-height: 1.87;
-    letter-spacing: 0.06em;
-    padding: 10px 20px;
-    border-radius: 4px;
-    margin-top: 30px;
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  }
-  .request_button:hover,
-  .request_button:focus,
-  .request_button:active {
-    background-color: $lightgray;
-    color: $blue;
-  }
-}
-
-//skills section
-@mixin skill-container {
-  width: 1170px;
-}
-
-.skills_section {
-  .container {
-    @include skill-container;
-  }
-
-  .container &_list {
-    display: flex;
-    gap: 30px;
-    padding: 0;
-  }
-
-  &_icons {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 25px 100px;
-    background-color: #f5f4fa;
-    border-radius: 4px;
-    margin-bottom: 30px;
-    max-width: 270px;
-    max-height: 120px;
-  }
-
-  &_title {
-    font-weight: $fontWeight;
-    font-size: 14px;
-    line-height: 1.14;
-    letter-spacing: 0.03em;
-    margin-bottom: 10px;
-  }
-  &_subtitle {
-    color: $gray;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 1.71;
-    letter-spacing: 0.03em;
-    text-align: left;
-  }
-}
-
-// section What we to do
-.workTitle {
-  font-weight: $fontWeight;
-  font-size: 36px;
-  line-height: 36px;
-  letter-spacing: 0.03em;
-  color: $black;
-  text-align: center;
-  margin-bottom: 90px;
-}
-
-.work_section_items {
-  display: flex;
-  justify-content: space-around;
-  padding-left: 0 215px;
-}
-
-.box {
-  position: relative;
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  &_bottom {
-    position: absolute;
-    width: 370px;
-    height: 70px;
-    bottom: 3px;
-    background: rgba(47, 48, 58, 0.8);
-    color: $white;
-    padding: 27px;
-
-    & p {
-      font-size: 14px;
-      line-height: 16px;
-      text-align: center;
-      letter-spacing: 0.03em;
-      text-transform: uppercase;
-      font-weight: $fontWeight;
-    }
   }
 }
 
