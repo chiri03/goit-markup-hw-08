@@ -46,7 +46,7 @@
   font-weight: 400;
   font-size: 14px;
   line-height: 1.71;
-  text-align: left;
+  text-align: center;
   color: $gray;
 }
 
@@ -71,9 +71,14 @@
   .skills_section_list {
     flex-direction: row;
     flex-wrap: wrap;
+    margin-left: 60px;
   }
 
   .skills_section_title {
+    text-align: left;
+  }
+
+  .skills_section_subtitle {
     text-align: left;
   }
 
