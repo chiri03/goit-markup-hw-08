@@ -205,3 +205,9 @@
     }
   }
 }
+
+@media screen and (min-width: 1200px) {
+  .contact_list {
+    display: flex;
+  }
+}
