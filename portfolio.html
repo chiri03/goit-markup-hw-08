@@ -30,16 +30,25 @@
         <a class="logo head_logo" href="index.html"
           >Web<span class="logo_web">Studio</span></a
         >
-        <!-- Navigation to other pages  -->
-        <nav class="portfolio">
-          <ul class="navigation_bar">
+        <!-- Navigation to other pages -->
+
+        <nav>
+          <button
+            class="mobile-nav-toggle"
+            aria-controls="main_nav_list"
+            aria-expanded="false"
+          ></button>
+          <ul id="main_nav_list" data-visible="false" class="main_nav_list">
             <li class="main_nav_item">
+              <span aria-hidden="true"></span>
               <a class="main_nav_link" href="index.html">Studio</a>
             </li>
             <li class="main_nav_item">
-              <a class="main_nav_link" href="portfolio.html">Portofolio</a>
+              <span aria-hidden="true"></span>
+              <a class="main_nav_link" href="portfolio.html">Portfolio</a>
             </li>
             <li class="main_nav_item">
+              <span aria-hidden="true"></span>
               <a class="main_nav_link" href="#contacte">Contacte</a>
             </li>
           </ul>
@@ -324,5 +333,6 @@
         </div>
       </footer>
     </div>
+    <script src="./js/modal.js"></script>
   </body>
 </html>

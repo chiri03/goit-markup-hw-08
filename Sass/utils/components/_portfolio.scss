@@ -1,0 +1,14 @@
+@mixin bottom-line-border {
+  border-bottom: 4px solid $blue;
+  border-radius: 2px;
+  width: 100%;
+  position: absolute;
+  bottom: -32px;
+  left: 0;
+  transition: border-bottom 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.portfolio:hover::after {
+  content: "";
+  @include bottom-line-border;
+}

@@ -1,0 +1,121 @@
+//skills section
+
+.skills_section {
+  display: flex;
+  justify-content: center;
+
+  .container {
+    flex-basis: 480px;
+  }
+}
+
+.skills_section_list {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-bottom: 60px;
+}
+
+.skills_section_item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.skills_section_icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 40px;
+  background-color: #f5f4fa;
+  border-radius: 4px;
+  margin-bottom: 30px;
+}
+
+.skills_section_title {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  margin-bottom: 10px;
+  margin-top: 30px;
+  text-align: center;
+}
+.skills_section_subtitle {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  text-align: center;
+  color: $gray;
+}
+
+.value-item {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 25px 100px;
+  background-color: #f5f4fa;
+  border-radius: 4px;
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media screen and (min-width: 768px) {
+  .skills_section {
+    .container {
+      flex-direction: row;
+      flex-basis: 768px;
+    }
+  }
+
+  .skills_section_list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-left: 60px;
+  }
+
+  .skills_section_title {
+    text-align: left;
+  }
+
+  .skills_section_subtitle {
+    text-align: left;
+  }
+
+  .skills_section_item {
+    flex-basis: calc((100% - 30px) / 2);
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .skills_section_icons {
+    padding: 25px 100px;
+    background-color: #f5f4fa;
+
+    max-width: 270px;
+    max-height: 120px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .skills_section {
+    .container {
+      flex-basis: 1200px;
+    }
+    .skills_section_list {
+      flex-wrap: nowrap;
+      margin-bottom: 94px;
+    }
+  }
+
+  .skills_section_icons {
+    padding: 25px 100px;
+    background-color: #f5f4fa;
+
+    max-width: 270px;
+    max-height: 120px;
+  }
+
+  .skills_section_item {
+    flex-basis: calc((100% - 90px) / 4);
+  }
+}

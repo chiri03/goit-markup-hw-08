@@ -1,0 +1,107 @@
+.mobile-nav-toggle {
+  display: none;
+}
+
+.menu__mobile {
+  display: none;
+}
+
+.mobile-nav-toggle {
+  display: none;
+}
+
+@media screen and (max-width: 35rem) {
+  .main_nav_list {
+    position: fixed;
+    inset: 0 0 0 0%;
+    flex-direction: column;
+    padding: min(30vh, 10rem) 2em;
+
+    background: $white;
+
+    display: inline-block;
+    color: inherit;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 2.17;
+    letter-spacing: 0.02em;
+
+    transform: translateX(100%);
+  }
+
+  .main_nav_list [data-visible="true"] {
+    transform: translateX(0%);
+  }
+
+  .mobile-nav-toggle {
+    display: block;
+    z-index: 9999;
+    width: 2.5rem;
+    border: 0;
+    top: 2rem;
+    right: 2rem;
+    background: url("/images/icons8-menu-rounded-30.png");
+    background-repeat: no-repeat;
+    aspect-ratio: 1;
+    position: absolute;
+  }
+
+  .main_nav_link {
+    color: $black;
+    text-decoration: none;
+    padding: 0 25px;
+    size: 14px;
+    line-height: 16px;
+    initial-letter-align: 2%;
+    font-weight: 500;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: $blue;
+    }
+  }
+
+  .contact_list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: fixed;
+    display: none;
+
+    &_item {
+      display: block;
+      color: inherit;
+      font-weight: 500;
+      font-size: 30px;
+      line-height: 1.17;
+      letter-spacing: 0.02em;
+    }
+
+    &_value {
+      color: $white;
+    }
+  }
+
+  .menu__mobile {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    margin-top: 64px;
+    margin-bottom: 48px;
+    gap: 20px;
+    top: 85%;
+    left: 10%;
+    display: none;
+
+    &_socila-links {
+      color: #2196f3;
+      font-size: 18px;
+      line-height: 1.22;
+      font-weight: 500;
+      text-decoration: none;
+    }
+  }
+}

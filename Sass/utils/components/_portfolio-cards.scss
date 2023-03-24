@@ -1,0 +1,155 @@
+.container_section {
+  display: flex;
+  justify-content: center;
+}
+
+.portfolo_container {
+  display: flex;
+  flex-direction: column;
+  flex: 0 1 1170px;
+  gap: 50px;
+  padding: 94px 0 0 0;
+  margin-left: 5%;
+}
+
+.container_img {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+.container_img_file {
+  border: 1px solid #eee;
+  max-width: 370px;
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:active,
+  &:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+      1px 4px 6px rgba(0, 0, 0, 0.16);
+  }
+}
+
+.card {
+  overflow: hidden;
+  position: relative;
+
+  &:hover ::after {
+    content: "Technoduck is a state-of-the-art coronavirus distribution platform. Companies use this platform for digital espionage and attacks on competitors' secure servers.";
+    color: $white;
+    top: 50%;
+    position: absolute;
+    padding: 15px;
+    line-height: 1.2;
+  }
+}
+.overlay {
+  width: 370px;
+  height: 295px;
+  position: absolute;
+  opacity: 0.7;
+  background-color: $blue;
+  transform: translateY(370px);
+  transition: transform 250ms ease-in-out;
+}
+.card:hover .overlay {
+  transform: translateY(0);
+}
+
+.container_img_file_head {
+  font-weight: $fontWeight;
+  font-size: 18px;
+  line-height: 36px;
+  padding: 20px 0px 0px 24px;
+  letter-spacing: 0.06em;
+  color: $black;
+}
+
+.container_img_file_paragraf {
+  font-size: 16px;
+  line-height: 30px;
+  letter-spacing: 0.03em;
+  padding-left: 24px;
+  color: $gray;
+}
+
+@media screen and (min-width: 768px) {
+  .portfolo_container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    .container_img_file {
+      max-width: 330px;
+      flex-shrink: 0;
+      display: block;
+    }
+  }
+}
+
+.container_img {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+.container_img_file {
+  background: $white;
+  border: 1px solid rgba(238, 238, 238, 1);
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 370px;
+  flex-shrink: 1;
+  height: 425px;
+
+  &:hover,
+  &:active,
+  &:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+      1px 4px 6px rgba(0, 0, 0, 0.16);
+  }
+}
+
+.card {
+  overflow: hidden;
+  position: relative;
+
+  &:hover ::after {
+    content: "Technoduck is a state-of-the-art coronavirus distribution platform. Companies use this platform for digital espionage and attacks on competitors' secure servers.";
+    color: $white;
+    top: 50%;
+    position: absolute;
+    padding: 15px;
+    line-height: 1.2;
+  }
+}
+.overlay {
+  width: 370px;
+  height: 295px;
+  position: absolute;
+  opacity: 0.7;
+  background-color: $blue;
+  transform: translateY(370px);
+  transition: transform 250ms ease-in-out;
+}
+.card:hover .overlay {
+  transform: translateY(0);
+}
+
+.container_img_file_head {
+  font-weight: $fontWeight;
+  font-size: 18px;
+  line-height: 36px;
+  padding: 20px 0px 0px 24px;
+  letter-spacing: 0.06em;
+  color: $black;
+}
+
+.container_img_file_paragraf {
+  font-size: 16px;
+  line-height: 30px;
+  letter-spacing: 0.03em;
+  padding-left: 24px;
+  color: $gray;
+}

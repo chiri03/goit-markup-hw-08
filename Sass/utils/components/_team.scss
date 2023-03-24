@@ -1,0 +1,151 @@
+//team section
+
+.team_section {
+  background: $lightgray;
+  display: flex;
+  justify-content: center;
+
+  &__container {
+    display: flex;
+    flex: 480px;
+    padding: 50px 0;
+    flex-direction: column;
+    gap: 50px;
+  }
+}
+
+.our_team {
+  font-weight: $fontWeight;
+  font-size: 36px;
+  line-height: 42px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: $black;
+
+  &_section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+.team {
+  margin: 0 15px;
+  flex-basis: 480px;
+  background-color: $white;
+  border-radius: 0px 0px 4px 4px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.photo {
+  width: 100%;
+  display: block;
+
+  &_container_name {
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: #212121;
+    padding: 3px;
+
+    &_post {
+      font-size: 16px;
+      line-height: 19px;
+      text-align: center;
+      letter-spacing: 0.03em;
+      color: $gray;
+      margin-bottom: 30px;
+    }
+  }
+}
+
+.team_link {
+  color: $gray;
+  left: 25px;
+  bottom: 10px;
+}
+@mixin color {
+  color: $gray;
+}
+
+.photo_container_post {
+  @include color;
+  padding: 5px;
+}
+
+.social_icons_list {
+  display: flex;
+  gap: 10px;
+  padding: 2px;
+}
+
+.social_link {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus,
+  &:active {
+    color: $white;
+    background-color: $blue;
+  }
+
+  .social_icons {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+    &:hover,
+    &:focus,
+    &:active {
+      fill: currentColor;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .our_team {
+    &_section {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+  }
+  .team_section {
+    &__container {
+      margin-left: 15px;
+    }
+  }
+
+  .team {
+    margin: 0;
+    flex-basis: calc((100% - 30px) / 2);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .our_team {
+    &_section {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: space-around;
+    }
+  }
+
+  .team_section {
+    flex-direction: row;
+    &__container {
+      flex: 1200;
+
+      flex-grow: 0;
+    }
+  }
+}
