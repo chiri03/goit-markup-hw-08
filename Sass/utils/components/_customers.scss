@@ -24,12 +24,12 @@
   gap: 30px;
   margin-top: 30px;
   padding-bottom: 60px;
-  color: $lightgray;
+  color: $gray;
   margin-left: 10px;
 
   &_item {
     flex-basis: calc((100% - 30px) / 2);
-    color: $lightgray;
+    color: $gray;
 
     &__inner {
       display: flex;
