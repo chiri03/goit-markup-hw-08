@@ -14,7 +14,7 @@
   outline: none;
 
   svg {
-    fill: #212121;
+    fill: $black;
   }
 }
 
@@ -28,7 +28,7 @@
 .menu-toggle:focus {
   cursor: pointer;
   svg {
-    fill: #2196f3;
+    fill: $blue;
   }
 }
 
