@@ -79,7 +79,8 @@
   letter-spacing: 0.02em;
 
   &:hover,
-  &:focus {
+  &:focus,
+  &:active {
     color: $blue;
   }
 }
