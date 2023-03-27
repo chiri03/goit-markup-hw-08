@@ -1,15 +1,3 @@
-// const mobileNav = document.querySelector(".primary-navigation ");
-// const navToggle = document.querySelector(".mobile-nav-toggle");
-
-// navToggle.addEventListener("click", () => {
-//   const visibility = mobileNav.getAttribute("data-visible");
-
-//   if (visibility === "false") {
-//     mobileNav.setAttribute("data-visible", true);
-//   } else if (visibility === "true") {
-//     mobileNav.setAttribute("data-visible", false);
-//   }
-// });
 (() => {
   const mobileMenu = document.querySelector(".js-menu-container");
   const openMenuBtn = document.querySelector(".js-open-menu");
