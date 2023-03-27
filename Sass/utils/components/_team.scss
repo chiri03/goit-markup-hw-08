@@ -47,7 +47,7 @@
     line-height: 19px;
     text-align: center;
     letter-spacing: 0.03em;
-    color: #212121;
+    color: $black;
     padding: 3px;
 
     &_post {
@@ -82,7 +82,7 @@
 }
 
 .social_link {
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: $borderColor;
   border-radius: 50%;
   width: 45px;
   height: 45px;

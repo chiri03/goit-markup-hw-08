@@ -24,20 +24,20 @@
   gap: 30px;
   margin-top: 30px;
   padding-bottom: 60px;
-  color: #afb1b8;
+  color: $lightgray;
   margin-left: 10px;
 
   &_item {
     flex-basis: calc((100% - 30px) / 2);
-    color: #afb1b8;
+    color: $lightgray;
 
     &__inner {
       display: flex;
       align-items: center;
       justify-content: center;
       background-color: $white;
-      color: #afb1b8;
-      border: 1px solid #afb1b8;
+      color: $lightgray;
+      border: 1px solid $lightgray;
       border-radius: 3px;
       width: 170px;
       height: 92px;
