@@ -111,6 +111,8 @@
 
 .subscribe_form {
   display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   gap: 12px;
 
   input {
@@ -140,5 +142,10 @@
     input {
       min-width: 358px;
     }
+  }
+}
+@media screen and (min-width: 430px) {
+  .subscribe_form {
+    flex-wrap: nowrap;
   }
 }
