@@ -119,6 +119,7 @@
     }
   }
   .team_section {
+    flex-grow: 0;
     &__container {
       margin-left: 15px;
     }
@@ -144,7 +145,6 @@
     flex-direction: row;
     &__container {
       flex: 1200;
-
       flex-grow: 0;
     }
   }

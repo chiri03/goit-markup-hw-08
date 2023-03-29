@@ -37,6 +37,8 @@
     padding: 10px 19px;
     align-self: center;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
   .request_button:hover,
   .request_button:focus,
